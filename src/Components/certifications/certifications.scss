@@ -1,0 +1,237 @@
+@import "../../global.scss";
+
+.certifications {
+  background-color: $thirdColor;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  .imgBackground {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    object-position: 20% 39%;
+  }
+
+  .h1Certifications {
+    font-size: 40px;
+    position: absolute;
+    top: 17vh;
+    color: rgb(255, 255, 255);
+    font-family: "Major Mono Display", monospace;
+    @media (max-width: 768px) {
+      
+      font-size: 35px;
+    }
+    @media (max-width: 450px) {
+      
+      font-size: 25px;
+    }
+  }
+
+  .arrow {
+    height: 70px;
+    width: auto;
+    position: absolute;
+    cursor: pointer;
+    background: white;
+    padding: 5px 5px;
+
+    &.left {
+      left: 15vw;
+      transform: rotate(90deg);
+      border-radius: 50%;
+      padding: 10px;
+      animation: blinkArrow 3s infinite;
+      @include mobile1024 {
+        left: 7.5vw;
+      }
+      @include mobile550 {
+        left: 25vw;
+        height: 50px;
+        top: 82.5vh;
+      }
+      @include mobile450 {
+        left: 25vw;
+        height: 50px;
+        top: 82.5vh;
+      }
+    }
+    &.right {
+      right: 15vw;
+      transform: rotate(-90deg);
+      border-radius: 50%;
+      padding: 10px;
+      animation: blinkArrow 3s infinite;
+      @include mobile1024 {
+        right: 7.5vw;
+      }
+      @include mobile550 {
+        right: 25vw;
+        height: 50px;
+        top: 82.5vh;
+      }
+      @include mobile450 {
+        right: 25vw;
+        height: 50px;
+        top: 82.5vh;
+      }
+    }
+  }
+  @keyframes blinkArrow {
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+
+  .slider {
+    height: 40vh;
+    display: flex;
+    position: absolute;
+    left: 0vw;
+    top: 30vh;
+    transition: 1s ease all;
+
+    @include mobile550 {
+      height: 45vh;
+      top: 30vh;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .item {
+        width: 40vw;
+        height: 100%;
+        background: linear-gradient(-120deg, #9a6148e5, #585858e0, #631c2be0);
+        background-size: 300% 300%;
+        backdrop-filter: blur(5px);
+        animation: gradient 10s ease infinite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 20px;
+        border-radius: 20px;
+
+        @include mobile1024 {
+          width: 55vw;
+        }
+        @include mobile550 {
+          flex-direction: column;
+          width: 70vw;
+        }
+        @include mobile550 {
+          width: 80vw;
+        }
+
+        .left {
+          flex: 2;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          margin-right: 12px;
+          border-radius: 5px;
+          border: 2px solid black;
+          @include mobile550 {
+            margin: 0 auto;
+          }
+
+          .leftContainer {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @include mobile550 {
+            }
+
+            .imgContainer {
+              width: 5vw;
+              height: 7.5vh;
+              border-radius: 50%;
+              background-color: transparent;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 5px;
+
+              @include mobile550 {
+                width: 7.5vw;
+                height: 5vh;
+                margin: 5px 5px;
+              }
+
+              img {
+                height: 100%;
+                @media (max-width: 768px) {
+                  height: 80%;
+                }
+              }
+            }
+            h2 {
+              font-size: calc(10px + 0.5vw);
+              margin: 5px;
+              margin-left: 20px;
+              @include mobile {
+                font-size: calc(10px + 0.5vw);
+              }
+              @include mobile550 {
+                margin: 0 auto;
+              }
+              @media (max-width: 350px) {
+                font-size: 10px;
+              }
+            }
+            p {
+              font-size: 15px;
+            }
+            span {
+              font-size: 12px;
+              font-weight: 600;
+              text-decoration: underline;
+              cursor: pointer;
+              @include mobile550 {
+                margin: 0 auto;
+                font-size: 10px;
+              }
+            }
+          }
+        }
+        .right {
+          flex: 5;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+
+          img {
+            height: 100%;
+            width: 100%;
+            transition: 0.5s ease all;
+            border: 2px solid black;
+            border-radius: 5px;
+
+            &:hover {
+              cursor: zoom-in;
+            }
+          }
+        }
+      }
+    }
+  }
+}

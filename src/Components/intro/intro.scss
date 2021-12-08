@@ -1,0 +1,168 @@
+@import "../../global.scss";
+
+.intro {
+  background-color: rgba(34, 33, 33, 0);
+  background-position: 80% 100%;
+  background-size: cover;
+  background-position: 25% 60%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vh;
+  position: relative;
+  overflow-y: hidden;
+
+  .right {
+    position: absolute;
+    padding: 0px;
+    top: 35vh;
+    left: 60vw;
+
+    @media (max-width: 995px), (max-height: 700px) {
+    }
+    @include mobile1024 {
+      top: 50%;
+      left: 70%;
+      transform: translate(-50%, -50%);
+    }
+    @include mobile {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @include mobile450 {
+      top: 50%;
+      left: 50%;
+     
+      width: 75vw;
+    }
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 50px;
+      border-radius: 20px;
+      z-index: 3;
+      padding: 20px;
+      text-align: justify;
+      color: rgba(255, 255, 255, 0.781);
+      @include mobile1024 {
+        margin: 0 auto;
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: rgba(34, 33, 33, 0.5);
+      }
+      @include mobile450 {
+        align-items:center;
+      }
+    }
+    h1 {
+      font-size: calc(30px + 1vw);
+      margin: 10px 0;
+      @media (max-height: 800px) {
+        font-size: calc(20px + 1.5vw);
+      }
+      @include mobile950 {
+        font-size: calc(20px + 1.5vw);
+      }
+      @include mobile {
+        font-size: calc(20px + 2vw);
+      }
+      @include mobile550 {
+        font-size: calc(18px + 1.8vw);
+      }
+    }
+    h2 {
+      font-size: calc(12px + 1vw);
+
+      @include mobile950 {
+        font-size: calc(10px + 1.5vw);
+      }
+      @include mobile {
+        font-size: calc(10px + 2.5vw);
+      }
+      @include mobile550 {
+        font-size: calc(9px + 3vw);
+      }
+    }
+    h3 {
+      font-size: calc(8px + 1.5vw);
+      
+    
+
+      @include mobile950 {
+        font-size: calc(10px + 1.5vw);
+      }
+      @include mobile550 {
+        font-size: calc(10px + 3vw);
+      }
+
+      @include mobile {
+        font-size: calc(5px + 2.5vw);
+      }
+      @include mobile550 {
+        font-size: calc(5px + 2vw);
+       
+      }
+
+      span {
+        font-size: inherit;
+        color: #e99318;
+      }
+
+      .ityped-cursor {
+        animation: blink 1s infinite;
+      }
+      @keyframes blink {
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  .arrowLinkintro {
+    z-index: 6;
+    margin-top: 100px;
+
+    @include mobile {
+      left: 130px;
+      font-size: 20px;
+    }
+
+    img {
+      width: calc(200px + 5vw);
+      animation: arrowBlink 2s infinite;
+      position: absolute;
+      top: 75%;
+      left: 60%;
+
+      @include mobile1024 {
+        top: 80vh;
+        left: 70%;
+        width: calc(200px + 9vw);
+        transform: translateX(-50%);
+      }
+      @include mobile {
+        left: 50%;
+        width: calc(200px + 11vw);
+      }
+      @include mobile450 {
+        left: 50%;
+        width: calc(250px + 5vw);
+      }
+    }
+
+    @keyframes arrowBlink {
+      100% {
+        opacity: 0.2;
+      }
+    }
+  }
+}

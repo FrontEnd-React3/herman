@@ -1,0 +1,45 @@
+$mainColor: #306794;
+$secondColor: rgb(143, 19, 44);
+$thirdColor: #cfcda7;
+
+$width: 768px;
+
+
+
+
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
+@mixin mobile450 {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
+@mixin mobile550 {
+  @media (max-width: 550px) {
+    @content;
+  }
+}
+@mixin mobile950 {
+  @media (max-width: 950px) {
+    @content;
+  }
+}
+@mixin mobile1024 {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin mobile1440 {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+@mixin mobile1840 {
+  @media (max-width: 1840px) {
+    @content;
+  }
+}
+

@@ -1,0 +1,61 @@
+{
+  "Hello": "Olá!",
+  "I am": "O Meu Nome é",
+  "Web Developer": "Web Developer",
+  "Technologies": "Tecnologias:",
+
+  "language": "Língua",
+  "About": "Sobre",
+  "Portfolio": "Portfólio",
+  "Certifications": "Certficação",
+  "Contact": "Contacto",
+
+  "Home": "Início",
+
+  "Born": "Nascido em Portugal. A viver em Bruxelas.",
+  "Coding": "Coding tem crescido cada vez mais em mim,",
+  "loving": "e estou a adorar este percurso!",
+  "Here you can read about my": "Aqui pode saber mais sobre o meu",
+  "PAST": "PASSADO",
+  "and": "e ",
+  "PRESENT": "PRESENTE",
+  "aspirations.": "",
+
+  "Education": "Educação",
+  "Degree in Speech Therapy by the IPL in Leiria, Portugal.": "Licenciatura em Terapia da Fala, IPL, Portugal",
+  "Several internships working with people suffering from communication disabilities.": "Vários estágios com pessoas que sofrem de disturbios da comunicação.",
+  "Work Experience": "Experiência Profissional",
+  "One year as a Speech Therapist in Portugal.": "Terapeuta da fala - 1 ano em Portugal",
+  "Four years as a Receptionist in Belgium": "Recepcionista - 4 anos em Bruxelas",
+  "Two Years as an Educator in the Kindergartens of the European Commission": "Educador nas creches da Comissão Europeia - 2 anos em Bruxelas",
+  "Traits I Learned to Value": "Aprendi a Valorizar",
+  "Assertive Communication": "Comunicação Assertiva",
+  "Critical Thinking and Adaptability": "Pensamento Crítico e Adaptabilidade",
+  "Empathy and Positive Attitude": "Empatia e Pensamento Positivo",
+  "Responsibility and Self-Improvement": "Responsabilidade e Auto-Aprendizagem",
+  "TeamWork and Work Ethic": "Cooperação e Ética em Equipa",
+
+  "Formation": "Formação",
+  "Front-End Web Development Course in Intec Brussels 2021": "Curso de Front-End Web Development em Intec Bruxelas 2021.",
+  "This course got me hooked on coding and helped me develop tools for autonomously learning more in this field.": "Este curso ajudou-me a desenvolver ferramentas para continuar a aprender de forma autónoma.",
+  "Self-Improvement": "Auto-Aprendizagem",
+  "The use of FreeCodeCamp, Sololearn, Stack Overflow, Codepen and Youtube allow me to push my learning curve outside of traditional education.": "O uso de materiais como o FreeCodeCamp, Sololearn, Stack Overflow, CodePen, Youtube permite-me continuar esta aprendizagem.",
+  "The Present Goal": "Presente Objectivo",
+  "I am currently looking for a job where I can apply my skills in front-end and continue my learning progress into back-end technologies.": "Estou atualmente à procura de um emprego onde possa aplicar as minhas competências em Front-End Development e continuar a minha aprendizagem para tecnologias back-end.",
+
+  "My first project using React.js without following an online tutorial.": "O meu primeiro projecto em React sem seguir um tutorial online.",
+  "Basic quiz application that helped me learn a lot of react's fundamentals.": "Uma aplicação quiz que me ajudou a aprender os fundamentos de React",
+
+  "Program": "Programa",
+  "Course Content:": "Conteúdo do Curso",
+
+  "Thank you for your Time!": "Obrigado pela Atenção!",
+  "I have created this portfolio without any templates or tutorials and tried to include a bit of myself in it.": "Criei este website sem o recurso a templates ou tutoriais e tentei incluir nele um pouco de mim!",
+  "You can leave me a message through the contact form, I would love to hear from you!": "Poderá enviar uma mensagem através do formulário de contacto. Espero por si!",
+  "Contact Form": "Formulário",
+  "Thank you for your message! I will reply at the earliest convenience!": "Obrigado pela sua mensagem, responderei assim que possível!",
+  "Created by ": "Criado por ",
+
+  "Reference Letter": "Carta de Recomendação",
+  "References": "Recomendação"
+}

@@ -1,0 +1,326 @@
+@import "../../global.scss";
+
+.portfolio {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  background-color: white;
+  background: url(portfolioBG.jpg),
+    linear-gradient(to top, #bdc3c773, #2c3e509a);
+  background-position: 100% 5%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-template-columns: 75vw 25vw;
+  grid-template-rows: 18vh 82vh;
+  
+  
+  @media (max-width: 768px) {
+    background-position: 80% 5%;
+  }
+  
+
+  .h1Portfolio {
+    font-size: 35px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    color: black;
+    border-radius: 20px;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+    margin-top: 75px;
+    padding: 5px;
+    align-self: center;
+    justify-self: flex-start;
+    backdrop-filter: blur(5px);
+    font-family: "Major Mono Display", monospace;
+    @media (max-width: 768px) {
+      margin-left: 50px;
+      margin-top: 300px;
+    }
+    @media (max-width: 375px) {
+      margin-left:40px;
+       font-size:25px;
+     }
+  }
+  ul {
+    background: rgba(245, 245, 245, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 20px 0px 0px 20px;
+    width: 20vw;
+    height: 82vh;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 3;
+    color: white;
+    transition: 0.5s all ease-out;
+    transform: translateX(21vw);
+    
+
+    &:hover {
+      transform: translateX(10vw);
+      @media (max-width: 1440px) {
+        transform: translateX(0vw);
+      }
+      @media (max-width: 1024px) {
+        transform: translateX(-10vw);
+      }
+      @media (max-width: 768px) {
+        transform: translateX(-20vw);
+      }
+      @media (max-width: 426px) {
+        transform: translateX(-30vw);
+      }
+      .ulArrowLeft {
+        transform: rotate(180deg);
+      }
+    }
+
+    @media (max-width: 1440px) {
+      width: 35vw;
+      transform: translateX(19.2vw);
+    }
+    @media (max-width: 1024px) {
+      width: 45vw;
+      transform: translateX(16.2vw);
+    }
+    @media (max-width: 768px) {
+      width: 55vw;
+      transform: translateX(13.2vw);
+    }
+    @media (max-width: 456px) {
+      
+      width: 65vw;
+      transform: translateX(5.2vw);
+    }
+
+    .arrowAndInfo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10vh;
+      margin-top: 5vh;
+      overflow-y: hidden;
+      .ulArrowLeft {
+        height: 50px;
+        width: 70px;
+        transition: 0.5s all ease;
+        @media (max-width: 1024px) {
+          height: 35px;
+          width: 75px;
+        }
+        @media (max-width: 456px) {
+      
+         height:30px;
+        }
+      }
+      p {
+        font-family: "Major Mono Display", monospace;
+        font-weight: 500;
+        background: black;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: white;
+        margin: 0px 0px 0px 10px;
+        font-size: 15px;
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+        @media (max-width: 456px) {
+      
+          font-size: 11px;
+         }
+      }
+    }
+
+    button {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 1s;
+      width: 350px;
+      font-size: 20px;
+      margin-bottom: 3vh;
+      @media (max-width: 1440px) {
+        font-size: 18px;
+      }
+      
+
+      &.active {
+        background-color: $mainColor;
+        color: white;
+      }
+    }
+  }
+  .containerPortfolio {
+    width: 100%;
+    height: 100%;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: 0.5s all ease;
+    z-index: 2;
+    margin: 0 auto;
+    @media (max-width: 456px) {
+      flex-direction: column;
+      flex-wrap:nowrap;
+    }
+
+    .link-container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s all ease;
+      cursor: initial;
+      pointer-events: none;
+    }
+    .item {
+      width: calc(10px + 25vw);
+      height: calc(10px + 22.5vw);
+      border-radius: 20px;
+      border: 1px solid lightgray;
+      margin: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      position: relative;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      overflow-y: none;
+      background-color: transparent;
+      align-self: center;
+      transition: 0.75s all ease-in-out;
+      overflow: hidden;
+
+      @media (max-width: 768px) {
+        width: calc(40px + 27vw);
+        height: calc(30px + 25vw);
+      }
+      @media (max-width: 630px) {
+        width: calc(30x + 25vw);
+        height: calc(30px + 25vw);
+      }
+      @media (max-width: 456px) {
+       height:20vh;
+       width: 40vw;
+       margin: 10px 10px;
+        
+      }
+
+      .itemTitle {
+        position: absolute;
+        font-size: calc(5px + 1vw);
+        font-weight: 600;
+        pointer-events: none;
+        background: white;
+        padding: 10px 10px;
+        border-radius: 20px;
+        color: black;
+      }
+
+      .link-one {
+        cursor: pointer;
+      }
+      .link-two {
+        width: auto;
+        height: auto;
+        display: none;
+      }
+      .githubicon {
+        height: 40px;
+        width: auto;
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+        display: none;
+        padding: 5px 5px;
+        margin: 10px 10px;
+        cursor: pointer;
+      }
+      .portfolioImg {
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 1;
+        object-fit: cover;
+        transition: 0.35s all ease-in-out;
+        cursor: pointer;
+        object-position: 50% 50%;
+        border-radius: 20px;
+        overflow: hidden;
+
+        &:hover {
+          transform: scale(1.10);
+          border-radius: 20px;
+         
+        }
+      }
+
+      .languageicon {
+        height: 40px;
+        width: auto;
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+        display: none;
+        padding: 5px 5px;
+      }
+
+      &:hover {
+        .item {
+          background-color: $mainColor;
+          opacity: 0.5;
+          z-index: 1;
+        }
+        .icon-container {
+          background-color: $secondColor;
+          z-index: 1;
+          opacity: 0.5;
+        }
+        img {
+          opacity: 1;
+        }
+        h3 {
+          display: flex;
+        }
+        .githubicon {
+          display: block;
+          z-index: 10;
+        }
+        .link-two {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .languageicon {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+

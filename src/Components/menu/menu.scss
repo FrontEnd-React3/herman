@@ -1,0 +1,213 @@
+@import "../../global.scss";
+
+.menu {
+  width: 100vw;
+  height: 100vh;
+  top: 0vh;
+  right: -100vw;
+  background: url("menuOpen.jpg");
+  background-size: cover;
+  background-position: 30% 10%;
+  background-repeat: no-repeat;
+  filter: sepia(0);
+  position: fixed;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+
+  @include mobile {
+    width: 100vw;
+  }
+
+  &.active {
+    right: 0;
+    opacity: 1;
+    filter: sepia(0.3);
+  }
+  &.inactive {
+    right: -100vw;
+    transition-delay: 0.25s;
+  }
+  ul {
+    margin: 0;
+    width: 100vw;
+    padding: 0;
+    list-style: none;
+    color: white;
+    font-weight: 500;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .homeLi {
+    transition: 1s all ease;
+    transition-delay: 1.15s;
+    transition-property: transform;
+    opacity: 0;
+    transform: translateX(-100vw);
+
+    &.active {
+      opacity: 1;
+      transform: translateX(35vw);
+    }
+    &.inactive {
+      transition-delay: 0.25s;
+      transition-property: transform;
+      transform: translateX(-100vw);
+      transition: 0.5s all ease;
+    }
+  }
+  .aboutLi {
+    transition: 1s all ease;
+    transition-delay: 1s;
+    transition-property: transform;
+    opacity: 0;
+    transform: translateX(-100vw);
+
+    &.active {
+      transform: translateX(35vw);
+      opacity: 1;
+
+    }
+    &.inactive {
+      transition-delay: 0.5s;
+      transition-property: transform;
+      transform: translateX(-100vw);
+      transition: 0.75s all ease;
+    }
+  }
+  .portfolioLi {
+    transition: 1s all ease;
+    transition-delay: 0.75s;
+    transition-property: transform;
+    opacity: 0;
+    transform: translateX(-100vw);
+
+    &.active {
+      transform: translateX(35vw);
+      opacity: 1;
+    }
+    &.inactive {
+      transition-delay: 0.75s;
+      transition-property: transform;
+      transform: translateX(-100vw);
+      transition: 1s all ease;
+    }
+  }
+  .certificationsLi {
+    transition: 1s all ease;
+    transition-delay: 0.55s;
+    transition-property: transform;
+    opacity: 0;
+    transform: translateX(-100vw);
+
+    &.active {
+      transform: translateX(35vw);
+      opacity: 1;
+    }
+    &.inactive {
+      transition-delay: 1s;
+      transition-property: transform;
+      transform: translateX(-100vw);
+      transition: 1.25s all ease;
+    }
+  }
+
+  .contactLi {
+    transition: 1s all ease;
+    transition-delay: 0.25s;
+    transition-property: transform;
+    opacity: 0;
+    transform: translateX(-100vw);
+
+    &.active {
+      transform: translateX(35vw);
+      opacity: 1;
+    }
+    &.inactive {
+      transition-delay: 1.25s;
+      transition-property: transform;
+      transform: translateX(-100vw);
+      transition: 1.5s all ease;
+      opacity: 0;
+    }
+  }
+  li {
+    display: flex;
+    width: 30vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #a9865a67;
+    transition: 1s all ease;
+    cursor: pointer;
+    backdrop-filter: blur(7px);
+    border: 1px solid black;
+    box-shadow: 0 0 5px rgba(0,0,0,.05), 2px 2px 5px rgba(0,0,0,.1);
+    @include mobile {
+      font-size: 2.5vw;
+      width:30vw;
+    }
+    @include mobile450 {
+      font-size: 2.7vw;
+      padding: 5px;
+      width:30vw;
+    }
+    @media (max-width: 375px) {
+      padding: 5px 3px;
+      font-size: 2.8vw;
+
+    }
+
+    a {
+      padding: 10px;
+      font-size: inherit;
+      color: inherit;
+      text-decoration: none;
+      color: black;
+      display: block;
+      cursor: pointer;
+     
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      .a::after {
+        content: "";
+        width: 0px;
+        height: 1px;
+        display: block;
+        background: black;
+        transition: 300ms;
+      }
+    }
+  }
+}
+.un {
+  display: block;
+}
+
+.un::after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: black;
+  transition: 300ms;
+}
+
+.un:hover::after {
+  width: 100%;
+}

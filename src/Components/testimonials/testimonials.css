@@ -1,0 +1,202 @@
+.testimonials {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.testimonials h1 {
+  font-size: 50px;
+}
+
+@media (max-width: 768px) {
+  .testimonials h1 {
+    font-size: 40px;
+  }
+}
+
+.testimonials .container {
+  width: 100%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .testimonials .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.testimonials .container .card {
+  width: 250px;
+  height: 70%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 15px -8px black;
+          box-shadow: 0px 0px 15px -8px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+@media (max-width: 768px) {
+  .testimonials .container .card {
+    height: 180px;
+    width: 275px;
+    padding: 5px;
+  }
+}
+
+.testimonials .container .card.featured {
+  width: 300px;
+  height: 75%;
+  margin: 0 30px;
+}
+
+@media (max-width: 768px) {
+  .testimonials .container .card.featured {
+    width: 250px;
+    height: 180px;
+    margin: 2px;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 768px) {
+  .testimonials .container .card.featured {
+    height: 180px;
+    width: 275px;
+    padding: 5px;
+  }
+}
+
+.testimonials .container .card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.testimonials .container .card .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .testimonials .container .card .top {
+    margin-bottom: 10px;
+  }
+}
+
+.testimonials .container .card .top img.left, .testimonials .container .card .top img.right {
+  height: 40px;
+}
+
+@media (max-width: 768px) {
+  .testimonials .container .card .top img.left, .testimonials .container .card .top img.right {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.testimonials .container .card .top img.user {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 30px;
+}
+
+@media (max-width: 768px) {
+  .testimonials .container .card .top img.user {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.testimonials .container .card .center {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #4D194D;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .testimonials .container .card .center {
+    font-size: 12px;
+    padding: 5px;
+  }
+}
+
+.testimonials .container .card .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+  .testimonials .container .card .bottom {
+    margin-top: 5px;
+  }
+}
+
+.testimonials .container .card .bottom h3 {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .testimonials .container .card .bottom h3 {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=testimonials.css.map */

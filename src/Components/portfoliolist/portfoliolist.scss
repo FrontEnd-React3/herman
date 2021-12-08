@@ -1,0 +1,154 @@
+@import "../../global.scss";
+$height: 75;
+$depth: 7;
+$depth2: 10;
+$color: #264653;
+$color2: #e99717;
+$text-color: lighten($color, 10%);
+$lighten-on-hover: 5%;
+$button-speed: 0.06;
+$timing-function: ease-out;
+
+.button {
+  font-family: "Major Mono Display", monospace;
+  height: 50px;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  font-size: calc(9px + 0.5vw);
+  text-decoration: none;
+  font-weight: bold;
+  color: $text-color;
+  &:visited {
+    color: $text-color;
+  }
+  padding: 10px;
+  display: inline-block;
+  background: $color;
+  border-radius: 5px;
+  border: 1px solid black;
+  top: 0;
+  transition: all ($button-speed + s) $timing-function;
+  position: relative;
+
+  @media (max-width: 831px) {
+    height: 45px;
+    font-size: calc(10px + 0.5vw);
+    
+  }
+  @media (max-width: 456px) {
+      
+    font-size: 12px;
+   }
+
+  .iconSpin {
+    color: white;
+    align-self: flex-start;
+    justify-self: start;
+    animation: 5s linear infinite iconSpinning;
+    transform-origin: 50% 40%;
+    
+    margin-left: 10px;
+  }
+  .listTitle {
+    font-size: 16px;
+    margin-left: 30px;
+    @media (max-width: 450px) {
+      
+      font-size: 14px;
+      margin-left:15px;
+    }
+  }
+
+  @keyframes iconSpinning {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+.button:hover {
+  background: linear-gradient(
+    to bottom,
+    lighten(saturate(lighten($color, 0%), 0%), $lighten-on-hover) 0%,
+    lighten(saturate(lighten($color, 0%), 0%), $lighten-on-hover) 0%,
+    lighten($color, $lighten-on-hover) 0%
+  );
+}
+.button:active {
+  top: $depth + px;
+  text-shadow: 0 -2px 0 darken($color, 0%), 0 1px 1px lighten($color, 5%),
+    0 0 4px $color;
+  color: lighten($color, 45%);
+  &:before {
+    top: 0;
+    box-shadow: 0 3px 3px rgba(224, 222, 222, 0.7), 0 3px 9px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.portfolioList {
+  font-size: 10px;
+  margin-right: 50px;
+  padding: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 2s ease all;
+
+  &.active {
+    background-color: #2363a0;
+    color: white;
+  }
+}
+.buttonActive {
+  cursor: pointer;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  text-shadow: 0 -2px 0 darken($color, 20%), 0 1px 1px lighten($color, 20%);
+  box-sizing: border-box;
+  font-size: calc(7px + 2vw);
+  text-decoration: none;
+  font-weight: bold;
+  color: lighten($color, 45%);
+  &:visited {
+    color: $text-color;
+  }
+  height: 50px;
+  padding: 10px;
+  display: inline-block;
+  background: linear-gradient(
+    to bottom,
+    saturate(lighten($color, 0%), 35%) 0%,
+    saturate(lighten($color, 0%), 15%) 26%,
+    $color 100%
+  );
+  border-radius: 5px;
+  border: 1px solid black;
+  transition: all ($button-speed + s) $timing-function;
+
+  @media (max-width: 831px) {
+    height: 45px;
+    font-size: calc(10px + 0.5vw);
+    
+  }
+  @media (max-width: 400px) {
+    height: 37px;
+    font-size: calc(7.5px + 0.5vw);
+   
+  }
+  .iconSpin {
+    margin-left: 10px;
+  }
+  .listTitle {
+    font-family: "Major Mono Display", monospace;
+    font-size: 16px;
+    
+    margin-left: 30px;
+    @media (max-width: 450px) {
+      
+      font-size: 14px;
+      margin-left:15px;
+    }
+  }
+}
